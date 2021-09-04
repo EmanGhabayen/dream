@@ -21,7 +21,7 @@ Auth::routes();
 
 Route::group(['middleware' => 'auth:web'], function () {
 
-    Route::view('/home', 'home');
+    Route::view('/home', 'home')->name('home');
 });
 
 Route::get('logout', [LoginController::class,'logout']);

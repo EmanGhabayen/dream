@@ -27,7 +27,7 @@ class RedirectIfAuthenticated
                 break;
         }
         if (Auth::guard($guard)->check()) {
-            return redirect()->route($route);
+            return redirect(route($route));
         }
 
         return $next($request);
